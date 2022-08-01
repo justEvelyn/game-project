@@ -199,7 +199,6 @@ Skills: 35,
 {
 id: 13, 
 name: "Miss Hound",
-
 Strength: 60,
 Speed: 70,
 Intelligence: 85,
@@ -285,6 +284,17 @@ deckMaker();
 console.log(playarr)
 console.log(computerarr)
 // use "<table border = '1\1'>"
+ 
 
-const html = trumps.map(o => Object.values(o).join(' : ')).join('<br/>')
- document.getElementById("name").innerHTML = html 
+const cardContainer = document.getElementById("name");
+
+for (var i in playarr) {
+    const el = document.createElement('div')
+    
+    // el.setAttribrute('id', i)
+    el.innerText= playarr[i]['strength']
+cardContainer.appendChild(el)
+}
+
+//object.keys
+//object.values
