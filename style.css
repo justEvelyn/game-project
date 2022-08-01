@@ -3,6 +3,8 @@ background-image: url("https://as2.ftcdn.net/v2/jpg/02/62/37/29/1000_F_262372900
 }
 
 h1{
-    color: white;
-   
+color: white;
+ display: flex;
+flex-direction: row; 
+   justify-content: center;
 }
