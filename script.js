@@ -22,7 +22,7 @@ Intelligence: 95,
 Attack: 70,
 Defence: 65,
 Skills: 90,
-"Top trumps rating": 75,
+playerrating: 75,
 image :"https://miraculousladybug.fandom.com/wiki/Marinette_Dupain-Cheng"
 },
 
@@ -36,7 +36,7 @@ Intelligence: 60,
 Attack: 85,
 Defence: 55,
 Skills: 70,
-"Top trumps rating": 70,
+playerrating: 70,
 image :"https://miraculousladybug.fandom.com/wiki/Adrien_Agreste"
 },
 
@@ -50,7 +50,7 @@ Intelligence: 90,
 Attack: 45,
 Defence: 75,
 Skills: 95,
-"Top trumps rating": 65,
+playerrating: 65,
 image :"https://static.wikia.nocookie.net/lady-bug/images/2/22/Rena_Rouge_Square.png/revision/latest?cb=20190629171806"
 },
 
@@ -64,7 +64,7 @@ Intelligence: 60,
 Attack: 35,
 Defence: 99,
 Skills: 70,
-"Top trumps rating": 60,
+playerrating: 60,
 image:"https://i.pinimg.com/originals/58/b5/d5/58b5d59fd4f4ba21d9d4ec73b117df66.jpg"
 },
 
@@ -78,7 +78,7 @@ Intelligence: 60,
 Attack: 35,
 Defence: 99,
 Skills: 70,
-"Top trumps rating": 60,
+playerrating: 60,
 image :"https://i.pinimg.com/originals/58/b5/d5/58b5d59fd4f4ba21d9d4ec73b117df66.jpg"
 },
     {
@@ -91,7 +91,7 @@ Intelligence: 80,
 Attack: 35,
 Defence:70,
 Skills: 95,
-"Top trumps rating": 65,
+playerrating: 65,
 image :"https://static.wikia.nocookie.net/p__/images/a/a4/Viperion.png/revision/latest?cb=20210906004105&path-prefix=protagonist"
 },
 
@@ -105,7 +105,7 @@ Intelligence: 95,
 Attack: 70,
 Defence:65,
 Skills: 85,
-"Top trumps rating": 75,
+playerrating: 75,
 image :"https://static.wikia.nocookie.net/vsbattles/images/a/ad/PegasusMLB.png/revision/latest?cb=20210209002959"
 },
 
@@ -119,7 +119,7 @@ Intelligence: 95,
 Attack: 70,
 Defence:65,
 Skills: 85,
-"Top trumps rating": 75,
+playerrating: 75,
 image  :"https://static.wikia.nocookie.net/lady-bug/images/4/47/Ryuko_Square.png/revision/latest?cb=20220614194443"
 },
 
@@ -133,7 +133,7 @@ Intelligence: 80,
 Attack: 65,
 Defence:70,
 Skills: 95,
-"Top trumps rating": 75,
+playerrating: 75,
 image:"https://static.wikia.nocookie.net/lady-bug/images/c/cc/Bunnyx_Square.png/revision/latest?cb=20220313111138"
 },
 
@@ -148,7 +148,7 @@ Intelligence: 50,
 Attack: 75,
 Defence:70,
 Skills: 55,
-"Top trumps rating": 65,
+playerrating: 65,
 image:"https://static.wikia.nocookie.net/lady-bug/images/c/cc/Bunnyx_Square.png/revision/latest?cb=20220313111138"
 },
 
@@ -164,7 +164,7 @@ Intelligence: 75,
 Attack: 70,
 Defence:50,
 Skills: 70,
-"Top trumps rating": 65,
+playerrating: 65,
 image:"https://i.pinimg.com/474x/f4/08/e0/f408e0b835af86ea28706e3671835de9.jpg"
 },
 
@@ -178,7 +178,7 @@ Intelligence: 75,
 Attack: 15,
 Defence:10,
 Skills: 35,
-"Top trumps rating": 30,
+playerrating: 30,
 image :"https://www.youloveit.com/uploads/posts/2021-05/1620412493_youloveit_com_pigella_pictures061.jpg"
 },
 
@@ -192,7 +192,7 @@ Intelligence: 75,
 Attack: 15,
 Defence:10,
 Skills: 35,
-"Top trumps rating": 30,
+playerrating: 30,
     image:"images/Purple_Tigress_Square.webp"
     },
 
@@ -205,7 +205,7 @@ Intelligence: 85,
 Attack: 55,
 Defence:50,
 Skills: 75,
-"Top trumps rating": 65,
+playerrating: 65,
    image:"https://static.wikia.nocookie.net/lady-bug/images/a/ae/Miss_Hound_Square.png/revision/latest?cb=20220611153854"
 
 },
@@ -219,7 +219,7 @@ Intelligence: 60,
 Attack: 75,
 Defence:95,
 Skills: 50,
-"Top trumps rating": 70,
+playerrating: 70,
   image:"https://static.wikia.nocookie.net/lady-bug/images/d/d7/Minotaurox_Square.png/revision/latest?cb=20220611153945"
 },
 {
@@ -232,7 +232,7 @@ Intelligence: 65,
 Attack: 85,
 Defence:60,
 Skills: 90,
-"Top trumps rating": 70,
+playerrating: 70,
   image :"https://static.wikia.nocookie.net/lady-bug/images/d/d7/Minotaurox_Square.png/revision/latest?cb=20220611153945"
 },
 
@@ -251,7 +251,7 @@ Skills: 90,
        
 //     //console.log(random)
 //     trumps[random]
-//     for(j in trumps[random]["base"]["Top trumps rating"]){
+//     for(j in trumps[random]["base"][playerrating]){
 //         console.log(j)
 //     }
 //     //console.log(trumps[random][base][Skills]) 
@@ -298,10 +298,60 @@ function draw() {
  }
 
 draw()
-console.log(currentcard)
+//console.log(currentcard)
+const playercarddisplay = document.getElementById('playerimage')
+const computercarddisplay = document.getElementById('computerimage')
+//"" + currentcardp.image <=you can use this to display the images too
+const hiddeninfo = document.getElementById('computerstats')
+
+function wins ()
+
+function cardinfo(p) {
+    if (p == true ) {
+       
+document.getElementById("playertitle").innerText = "Name: " + currentcardp.name
+//addevent listener - add functions(e.g click/keypress/nouseover/mouseleave)
+document.getElementById("playerStrength").innerText = "Strength: " + currentcardp.Strength
+//once its clicked we want it to
+document.getElementById("playerStrength").addEventListener("click", function () {
+hiddeninfo.style.visibility = 'visible'
+setTimeout(function(){
+    if (currentcardp.Strength > currentcardc.Strength) {
+       playarr.push(currentcardc)
+       playarr.push(currentcardp)
+       draw()
+        console.log('player wins')
+    } else {
+
+    }
+},3000)
+})
+document.getElementById("playerSpeed").innerText = "Speed: " + currentcardp.Speed
+document.getElementById("playerIntelligence").innerText = "Intelligence: " + currentcardp.Intelligence
+document.getElementById("playerAttack").innerText = "Attack: " + currentcardp.Attack
+document.getElementById("playerDefence").innerText = "Defence: " + currentcardp.Defence
+document.getElementById("playerSkills").innerText = "Skills: " + currentcardp.Skills
+document.getElementById("playerrating").innerText = "Player rating: " + currentcardp.playerrating
+playercarddisplay.src = `${currentcardp.image}` 
+    } else {
+document.getElementById("computertitle").innerText = "Name: " + currentcardc.name
+document.getElementById("computerStrength").innerText = "Strength: " + currentcardc.Strength
+document.getElementById("computerSpeed").innerText = "Speed: " + currentcardc.Speed
+document.getElementById("computerIntelligence").innerText = "Intelligence: " + currentcardc.Intelligence
+document.getElementById("computerAttack").innerText = "Attack: " + currentcardc.Attack
+document.getElementById("computerDefence").innerText = "Defence: " + currentcardc.Defence
+document.getElementById("computerSkills").innerText = "Skills: " + currentcardc.Skills
+document.getElementById("computerrating").innerText = "Player rating: " + currentcardc.playerrating
+computercarddisplay.src = `${currentcardc.image}` 
+
+    }
+
+}
+cardinfo(true);
+cardinfo(false);
 
 
-
+// currentcardc['Strength']
 // for (var i in playarr) {
 //     const el = document.createElement('div')
 //el.setAttribute(background)
