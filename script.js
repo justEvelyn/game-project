@@ -193,7 +193,7 @@ Attack: 15,
 Defence:10,
 Skills: 35,
 "Top trumps rating": 30,
-    image:"https://static.wikia.nocookie.net/lady-bug/images/2/22/Purple_Tigress_Square.png/revision/latest?cb=20220326212810"
+    image:"images/Purple_Tigress_Square.webp"
     },
 
 {
@@ -288,13 +288,27 @@ console.log(computerarr)
 
 const cardContainer = document.getElementById("name");
 
-for (var i in playarr) {
-    const el = document.createElement('div')
-    
+
+let currentcardp = [];
+let currentcardc = [];
+function draw() {
+
+      currentcardp = playarr.shift()
+      currentcardc = computerarr.shift()
+ }
+
+draw()
+console.log(currentcard)
+
+
+
+// for (var i in playarr) {
+//     const el = document.createElement('div')
+//el.setAttribute(background)
     // el.setAttribrute('id', i)
-    el.innerText= playarr[i]['strength']
-cardContainer.appendChild(el)
-}
+    //el.innerText= playarr[i]['strength']
+//cardContainer.appendChild(el)
+
 
 //object.keys
 //object.values

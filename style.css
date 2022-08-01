@@ -1,14 +1,33 @@
 body {
 background-image: url("https://as2.ftcdn.net/v2/jpg/02/62/37/29/1000_F_262372900_fiKg5ZvEreIfcNyYNaWeo59501FWUwt0.jpg");
+display: flex;
+flex-direction: column;
 }
-
+#cards{
+   align-self: center;
+background-color: seagreen;
+display: flex;
+width: 70%;
+height: 80%;
+}
 h1{
 color: white;
  display: flex;
 flex-direction: row; 
    justify-content: center;
 }
-div{
+#playarr, #computerarr{
+   display: flex;
+   flex-direction:column;
+   width: 45%;
+   height: 70%;
    color:black;
    background-color:white;
+}
+#playerimage{
+   width: 17rem;
+   height: 20rem;
+}
+#playerstats,#computerstats{
+   background-color:purple;
 }
