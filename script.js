@@ -405,28 +405,11 @@ image :"images/Chameleon.jpeg"
 },
 ]
 
-//console.log(trumps);
 
-// put images into one class to make them all the same size
-
-// function deckMaker(trumps) {
-// // math.random doesnt work well so we use math.floor 
-
-// for ( let i = 0; i < trumps.length; i++) {
-//     let random = Math.floor(Math.random()*14)+1
-       
-//     //console.log(random)
-//     trumps[random]
-//     for(j in trumps[random]["base"][playerrating]){
-//         console.log(j)
-//     }
-//     //console.log(trumps[random][base][Skills]) 
-// }
-// }
-// deckMaker(trumps);
 
 let playarr = [];
 let computerarr = [];
+
 function deckMaker() {
 let decklength = trumps.length;
 let playercard= 0;
@@ -439,7 +422,7 @@ while ( --decklength > -1) {
     if (playercard > computercard){
         computerarr.push(randomizedcard[0])
         computercard +=1
-
+        
     } else if (playercard == computercard) {
         playarr.push(randomizedcard[0])
         playercard+=1
@@ -450,7 +433,7 @@ deckMaker();
 console.log(playarr)
 console.log(computerarr)
 // use "<table border = '1\1'>"
-
+ 
 
 const cardContainer = document.getElementById("name");
 
@@ -470,11 +453,10 @@ const computercarddisplay = document.getElementById('computerimage')
 //"" + currentcardp.image <=you can use this to display the images too
 const hiddeninfo = document.getElementById('computerstats')
 
-function wins ()
+ 
 
-function cardinfo(p) {
-    if (p == true ) {
-
+function cardinfo(p){
+    if (p == true ) {   
 document.getElementById("playertitle").innerText = "Name: " + currentcardp.name
 //addevent listener - add functions(e.g click/keypress/nouseover/mouseleave)
 document.getElementById("playerStrength").innerText = "Strength: " + currentcardp.Strength
@@ -492,6 +474,7 @@ setTimeout(function(){
     }
 },3000)
 })
+
 document.getElementById("playerSpeed").innerText = "Speed: " + currentcardp.Speed
 document.getElementById("playerIntelligence").innerText = "Intelligence: " + currentcardp.Intelligence
 document.getElementById("playerAttack").innerText = "Attack: " + currentcardp.Attack
@@ -511,101 +494,8 @@ document.getElementById("computerrating").innerText = "Player rating: " + curren
 computercarddisplay.src = `${currentcardc.image}` 
 
     }
-
 }
+
+
 cardinfo(true);
 cardinfo(false);
-
-
-
-
-// let playarr = [];
-// let computerarr = [];
-// function deckMaker() {
-// let decklength = trumps.length;
-// let playercard= 0;
-// let computercard = 0;
-// while ( --decklength > -1) {
-//     let cardidx = Math.floor(Math.random()*(decklength))
-//     //cardidx selects the card. 
-//     let randomizedcard = trumps.splice(cardidx, 1) 
-
-//     if (playercard > computercard){
-//         computerarr.push(randomizedcard[0])
-//         computercard +=1
-        
-//     } else if (playercard == computercard) {
-//         playarr.push(randomizedcard[0])
-//         playercard+=1
-//     }
-// }
-// }
-// deckMaker();
-// console.log(playarr)
-// console.log(computerarr)
-// // use "<table border = '1\1'>"
- 
-
-// const cardContainer = document.getElementById("name");
-
-
-// let currentcardp = [];
-// let currentcardc = [];
-// function draw() {
-
-//       currentcardp = playarr.shift()
-//       currentcardc = computerarr.shift()
-//  }
-
-// draw()
-// //console.log(currentcard)
-// const playercarddisplay = document.getElementById('playerimage')
-// const computercarddisplay = document.getElementById('computerimage')
-// //"" + currentcardp.image <=you can use this to display the images too
-// const hiddeninfo = document.getElementById('computerstats')
-
-// function wins ()
-
-// function cardinfo(p) {
-//      if (p == true ) {
-       
-// document.getElementById("playertitle").innerText = "Name: " + currentcardp.name
-// //addevent listener - add functions(e.g click/keypress/nouseover/mouseleave)
-// document.getElementById("playerStrength").innerText = "Strength: " + currentcardp.Strength
-// //once its clicked we want it to
-// document.getElementById("playerStrength").addEventListener("click", function () {
-// hiddeninfo.style.visibility = 'visible'
-// setTimeout(function(){
-//     if (currentcardp.Strength > currentcardc.Strength) {
-//        playarr.push(currentcardc)
-//        playarr.push(currentcardp)
-//        draw()
-//         console.log('player wins')
-//     } else {
-
-//     }
-// },3000)
-// })
-// document.getElementById("playerSpeed").innerText = "Speed: " + currentcardp.Speed
-// document.getElementById("playerIntelligence").innerText = "Intelligence: " + currentcardp.Intelligence
-// document.getElementById("playerAttack").innerText = "Attack: " + currentcardp.Attack
-// document.getElementById("playerDefence").innerText = "Defence: " + currentcardp.Defence
-// document.getElementById("playerSkills").innerText = "Skills: " + currentcardp.Skills
-// document.getElementById("playerrating").innerText = "Player rating: " + currentcardp.playerrating
-// playercarddisplay.src = `${currentcardp.image}` 
-//     } else {
-// document.getElementById("computertitle").innerText = "Name: " + currentcardc.name
-// document.getElementById("computerStrength").innerText = "Strength: " + currentcardc.Strength
-// document.getElementById("computerSpeed").innerText = "Speed: " + currentcardc.Speed
-// document.getElementById("computerIntelligence").innerText = "Intelligence: " + currentcardc.Intelligence
-// document.getElementById("computerAttack").innerText = "Attack: " + currentcardc.Attack
-// document.getElementById("computerDefence").innerText = "Defence: " + currentcardc.Defence
-// document.getElementById("computerSkills").innerText = "Skills: " + currentcardc.Skills
-// document.getElementById("computerrating").innerText = "Player rating: " + currentcardc.playerrating
-// computercarddisplay.src = `${currentcardc.image}` 
-
-//     }
-
-// }
-// cardinfo(true);
-// cardinfo(false);
