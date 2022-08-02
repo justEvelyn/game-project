@@ -5,7 +5,6 @@ flex-direction: column;
 }
 #cards{
    align-self: center;
-background-color: seagreen;
 display: flex;
 width: 70%;
 height: 80%;
@@ -24,10 +23,12 @@ flex-direction: row;
    color:black;
    background-color:white;
 }
-#playerimage{
-   width: 17rem;
-   height: 20rem;
+img{
+   float: left;
+   width:  500px;
+   height: 500px;
+   object-fit: cover;
 }
 #playerstats,#computerstats{
-   background-color:purple;
+   background-color: bisque;
 }

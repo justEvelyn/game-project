@@ -145,7 +145,7 @@ image:"images/Vesperia_Square.webp"
 id: 11, 
 name: "Pigella",
 
-Strength: 30,
+Strength: 10,
 Speed: 25,
 Intelligence: 75,
 Attack: 15,
@@ -284,7 +284,7 @@ Attack: 95,
 Defence:70,
 Skills: 99,
 playerrating: 75,
-image :"images/Queen_Wasp_%28371%29.webp"
+image :"images/queen wasp.jpg"
 },
 {
 id: 22, 
@@ -472,7 +472,7 @@ setTimeout(function(){
     } else {
 
     }
-},3000)
+},2000)
 })
 
 document.getElementById("playerSpeed").innerText = "Speed: " + currentcardp.Speed
